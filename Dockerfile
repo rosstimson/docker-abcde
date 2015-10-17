@@ -2,7 +2,8 @@ FROM fedora:22
 MAINTAINER Ross Timson <ross@rosstimson.com>
 
 # Install build requirements.
-RUN dnf install -y ImageMagick \
+RUN dnf install -y AtomicParsley \
+                   ImageMagick \
                    autoconf \
                    automake \
                    cd-discid \
