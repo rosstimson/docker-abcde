@@ -125,6 +125,7 @@ RUN cd /usr/local/src \
     && cmake -DCMAKE_INSTALL_PREFIX=/usr/local . \
     && make \
     && make install
+ENV LD_LIBRARY_PATH /usr/local/lib
 
 # abcde
 RUN cd /usr/local/src \
@@ -138,8 +139,7 @@ RUN cpanm --notest WebService::MusicBrainz \
 
 # Cleanup.
 RUN rm -rf /usr/local/src/* \
-    && dnf clean all \
-    && dnf erase -y autoconf automake cmake gcc gcc-c++ git libtool make mercurial nasm pkgconfig zlib-devel
+    && dnf clean all
 
 # Define entrypoint so we can use container as if it's a standalone app.
 ENTRYPOINT ["abcde"]
