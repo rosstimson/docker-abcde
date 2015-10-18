@@ -15,6 +15,7 @@ RUN dnf install -y AtomicParsley \
                    gcc-c++ \
                    git \
                    glib2-devel \
+                   hostname \
                    libcurl-devel \
                    libdiscid-devel \
                    libtool \
