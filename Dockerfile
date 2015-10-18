@@ -120,6 +120,15 @@ RUN cd /usr/local/src \
     && make \
     && make install
 
+# normalize
+RUN cd /usr/local/src \
+    && curl -L -O http://savannah.nongnu.org/download/normalize/normalize-0.7.7.tar.gz \
+    && tar xzvf normalize-0.7.7.tar.gz \
+    && cd normalize-0.7.7 \
+    && ./configure --prefix="/usr/local" \
+    && make \
+    && make install
+
 # glyr
 RUN cd /usr/local/src \
     && git clone https://github.com/sahib/glyr.git \
