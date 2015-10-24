@@ -16,6 +16,7 @@ RUN dnf install -y AtomicParsley \
                    git \
                    glib2-devel \
                    hostname \
+                   icedax \
                    libcurl-devel \
                    libdiscid-devel \
                    libtool \
